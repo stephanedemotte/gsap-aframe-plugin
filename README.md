@@ -2,12 +2,19 @@
 Based on GSAP PIXI Plugin https://github.com/noprotocol/gsap-pixi-plugin
 
 ```
+// html
+<a-plane class="element" opacity="0" color="red" width="1" height="1" />
+<a-entity class="element" opacity="1" color="black" width="1" height="1" position="2 0 2" />
+```
+
+```
+// js
 import 'AframePlugin'
 
-const el = document.querySeletor('.elements')
+const els = document.querySeletor('.element')
 
 el.addEventListener('materialtextureloaded', () => {
-  TweenLite.to(el, 1, {
+  TweenLite.to(els, 1, {
     aframe: {
       alpha: 0, // material must be loaded
       color: '#fff' // use (new THREE.Color(color))
