@@ -1,5 +1,5 @@
-# gsap-pixi-plugin
-Based on https://github.com/noprotocol/gsap-pixi-plugin
+# gsap-aframe-plugin
+Based on GSAP PIXI Plugin https://github.com/noprotocol/gsap-pixi-plugin
 
 ```
 import 'AframePlugin'
