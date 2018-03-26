@@ -16,7 +16,7 @@ el.addEventListener('materialtextureloaded', () => {
       y: 10,
       z: 10,
 
-      rotation: 90, // rotate X,Y,Z
+      rotation: 90, // rotate X,Y,Z in deg
       rotationX: 10,
       rotationY: 10,
       rotationZ: 10,
