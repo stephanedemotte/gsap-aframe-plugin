@@ -9,7 +9,7 @@ Based on GSAP PIXI Plugin https://github.com/noprotocol/gsap-pixi-plugin
 
 ```
 // js
-import 'AframePlugin'
+import 'gsap-aframe-plugin'
 
 const els = document.querySeletor('.element')
 
