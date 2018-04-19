@@ -1,19 +1,16 @@
-var _gsScope = (typeof module !== "undefined" && module.exports && typeof global !== "undefined") ? global : this || window;
-(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
+var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
+  (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push( function() {
+     "use strict";
 
-  "use strict";
-
-var AframePlugin = _gsScope._gsDefine.plugin({
+_gsScope._gsDefine.plugin({
     propName: 'aframe',
     priority: 0,
     API: 2,
     global: true,
     version: "1.0.0",
-    // overwriteProps: ["alpha", "x", "y", "z", "scaleX", "scaleY", "scaleZ", "rotationX", "rotationY", "rotationZ"],
     init: function(target, values, tween) {
       const domEl = target
       target = target.object3D
-
 
       this._domEl = domEl
       this._modifiedValues = values
@@ -89,32 +86,5 @@ var AframePlugin = _gsScope._gsDefine.plugin({
       return true
     },
 
-    // set: function(v) {
-    //   this._super.setRatio.call(this, v);
-    //   if(v !== 1) return
-
-    //   for(const property in this._modifiedValues) {
-    //     let value = this._modifiedValues[property]
-
-    //     if(property == 'alpha')
-    //       this._domEl.setAttribute('material', 'opacity', value);
-    //   }
-    // }
-
   })
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
-
-
-//export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
-(function(name) {
-	"use strict";
-	var getGlobal = function() {
-		return (_gsScope.GreenSockGlobals || _gsScope)[name];
-	};
-	if (typeof(module) !== "undefined" && module.exports) { //node
-		require("gsap/TweenLite.js");
-		module.exports = getGlobal();
-	} else if (typeof(define) === "function" && define.amd) { //AMD
-		define(["gsap/TweenLite"], getGlobal);
-	}
-}("PixiPlugin"));
